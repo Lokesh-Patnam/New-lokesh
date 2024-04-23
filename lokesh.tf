@@ -130,3 +130,12 @@ Name  = "patnam"
 }
 }
 
+resource "aws_instance" "instance" {
+ami           = "ami-0684f3b195c7387ad"
+instance_type = "t3.micro"
+subnet_id     = aws_subnet.lokesh-sub1.id
+count         = 2
+tags  = {
+Name  = "Lokesh"
+}
+}
